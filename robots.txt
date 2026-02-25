@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kdhi.com.cn/sitemap.xml
