@@ -264,7 +264,21 @@ nav ul li:hover .submenu {
     color: var(--text-dark);
 }
 
-/* Company Profile: make bold labels use the section bar color */
+/* Company Profile: color the top line of each item (the category heading) deep blue to match section titles */
+.list-section .item-text:first-child strong {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 1.2rem;       /* slightly larger than normal text */
+    text-decoration: underline;
+}
+
+/* exception: download link text should not be underlined */
+.list-item.download-catalog .item-text:first-child strong {
+    text-decoration: none;
+    font-size: 1rem; /* revert size to normal */
+}
+
+/* keep other bold labels in primary blue as before */
 .list-section .item-text strong {
     color: var(--primary-blue);
     font-weight: 700;
