@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 设置字符编码为 UTF-8，支持中文和英文 -->
+        <meta charset="UTF-8">
+        <!-- 设置网页自适应，适配手机和电脑屏幕 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 网页标题，显示在浏览器标签页上 -->
+        <title>Belt Conveyor & System Designing, Manufacturing, servicing |KDHI Shanghai </title>
+        <!-- 引入 Font Awesome 图标库，用于显示各种图标 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- 引入外部 CSS 样式文件 -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <!-- ========== 头部区域 ========== -->
+        <header>
+            <div class="header-container">
+                <!-- Logo 区域：包含 Logo 图片和 KDHI 文字 -->
+                <div class="logo">
+                    <!-- Logo 图片位置，可替换为您的实际 Logo 图片链接 -->
+                    <a href="index.html" aria-label="Homepage">
+                        <img src="pic/logo.png" alt="KDHI Logo" class="logo-img">
+                    </a>
+                    <span class="logo-text">KDHI</span>
+                </div>
+
+                <!-- 手机菜单按钮 -->
+                <button class="mobile-menu-btn" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- 导航菜单 -->
+                <nav>
+                    <ul id="mainMenu">
+                        <!-- 主菜单 1：Home，移除子菜单，链接至首页 -->
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <!-- 主菜单 2：About，含 5 个子菜单 -->
+                        <li>
+                            <a href="#about">About <i class="fas fa-chevron-down menu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#company-profile">Profile</a></li>
+                                <li><a href="news.html">News</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 主菜单 3：Services，含 5 个子菜单 -->
+                        <li>
+                            <a href="#services">Services <i class="fas fa-chevron-down menu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#services">Engineering</a></li>
+                                <li><a href="#services">Designing</a></li>
+                                <li><a href="#services">Fabricating</a></li>
+                                <li><a href="#services">Logistics</a></li>
+                                <li><a href="#services">Supervision</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 主菜单 4：Projects，含 3 个子菜单 -->
+                        <li>
+                            <a href="#gallery">Projects <i class="fas fa-chevron-down menu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#gallery">Case Studies</a></li>
+                                <li><a href="#gallery">Portfolio</a></li>
+                                <li><a href="#gallery">Awards</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 主菜单 5：Contact，含 5 个子菜单 -->
+                        <li>
+                            <a href="#contact">Contact <i class="fas fa-chevron-down menu-arrow"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#contact">Get in Touch</a></li>
+                                <li><a href="#contact">Locations</a></li>
+                                <li><a href="#contact">Support</a></li>
+                                <li><a href="#contact">FAQ</a></li>
+                                <li><a href="#contact">Feedback</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ========== Hero 区域（深蓝色背景）========== -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <h1>The Full-Service Company for Belt Conveyor & System</h1>
+                <p>As China's leading designer, manufacturer, and service provider of belt conveyors, KDHI delivers comprehensive conveying systems for bulk material handling projects across the globe. </p>
+            </div>
+        </section>
+
+        <!-- ========== 列表展示区域（取代原视频区域） ========== -->
+        <!-- 在列表区域前添加 Company Profile 标题 -->
+        <section class="list-section">
+            <div class="section-title">
+                <h2 id="company-profile">Company Profile</h2>
+            </div>
+
+            <div class="list-container">
+                <!-- 每一行包含左侧文字和右侧缩略图 -->
+                <!-- 这里示例 8 行，可根据需要调整文本和图片路径 -->
+
+                <div class="list-item">
+                    <!-- 外层容器（对应你的“一个格子”） -->
+                    <div style="width: 100%;">
+                        <div class="item-text"><strong>Industry Affiliations</strong></div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Deputy Director Unit</strong>, China Heavy Machinery Industry Association</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Chairman Unit</strong>, Belt Conveyor Branch, China Heavy Machinery Industry Association</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Deputy Director Unit</strong>, Shanghai Crane & Transportation Machinery Industry Association</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Deputy Director Unit</strong>, Shanghai Mechanical Engineering Society</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/CHMIA-S.png" alt="图片1" data-full="pic/CHMIA.png"></div>
+                </div>
+
+                <div class="list-item">
+                    <div style="width: 100%;">
+                        <div class="item-text"><strong>Certifications</strong></div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>ISO9001</strong> Quality Management System Certification</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>ISO14001</strong> Environmental Management System Certification</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>ISO45001</strong> Occupational Health and Safety Management System Certification</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Welding qualifications</strong> 38 skilled workers hold welding qualifications to <strong>EN, AWS, AS</strong> standards.</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/certificates.png" alt="图片2" data-full="pic/certificates.png"></div>
+                </div>
+
+                <div class="list-item">
+                    <div style="width: 100%;">
+                        <div class="item-text"><strong>Facilities & Location</strong></div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Location of Head Office</strong> No.815, Huaqing Road, Qingpu Industrial Zone,Shanghai China.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Main Production Base</strong> No.29 Jinniu Middle Road, Langxi Economic Development   Zone,Langxi County,Xuancheng, Anhui Province, China.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Land Area</strong> 345,800 m²</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Building Area</strong> 252,000 m²</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Manufacturing Bases</strong> KDHI operates four production facilities across Shanghai and Anhui Province.</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/office.png" alt="图片3" data-full="pic/office.png"></div>
+                </div>
+
+                <div class="list-item">
+                    <div style="width: 100%;">
+                        <div class="item-text"><strong>Technical Capabilities</strong></div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Strong R&D Capability</strong> With strong R&D strength, Shanghai Keda Heavy Industry Group has an R&D team composed of top engineering technicians and world-leading design software.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Professional Technical Team</strong> KDHI has 126 intermediate and senior technicians, including 6 professors of engineering and 25 senior engineers, covering mechanics, steel structure, power distribution, control and inspection.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Proprietary Core Technologies</strong> Possessing 33 proprietary design technologies for belt conveyors with independent intellectual property rights, as well as extensive experience in design, manufacturing, operation and maintenance of belt conveyors.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Patents & Awards</strong> KDHI has won numerous national, provincial and municipal Science and Technology Progress Awards and Key New Product Awards. A total of 196 invention and utility model patents have been applied for and granted.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>International Standard Services</strong> The Group can provide global customers with full life cycle design, production and inspection services complying with <strong>GB, ISO, EN, CEMA, DIN, AS</strong> and <strong>JIS</strong> standards.</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/engineering.png" alt="图片3" data-full="pic/engineering.png"></div>
+                </div>
+
+
+                <div class="list-item">
+                    <div style="width: 100%;">
+                        <!-- 大标题：覆盖“人员+产能”核心，机械行业通用 -->
+                        <div class="item-text"><strong>Production Capacity & Workforce</strong></div>
+
+                        <!-- 子项1：技术工人资质 -->
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Skilled Workforce</strong> The company employs a workforce of nearly 669 skilled workers., among whom 38 hold production qualifications compliant with EN, AWS and AS standards.</div>
+
+                        <!-- 子项2：核心生产能力（拆分展示更清晰） -->
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Annual Production Capacity</strong> With advanced production equipment and high-level technicians, KDHI achieves an annual production capacity of <strong>6,000 pulleys</strong>, <strong>700,000 idlers</strong> and <strong>80,000 tons</strong> of <strong>Steelworks</strong>.</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/manpower.png" alt="图片4" data-full="pic/manpower.png"></div>
+                </div>
+
+                <div class="list-item">
+                    <div style="width: 100%;">
+                        <div class="item-text"><strong>Production Equipment & Intelligent Manufacturing</strong></div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Advanced Production Technology</strong> Shanghai Keda Heavy Industry Group has introduced world-leading belt conveyor production and processing technologies and dedicated production equipment.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Key Production Equipment</strong> Including dedicated pulley production equipment, automatic idler production line, automatic stringer production line, automatic idler support welding line and automatic support welding line.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Intelligent Manufacturing</strong> The above equipment realizes the intelligent manufacturing of general and standard components.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Core Component Processing</strong> Laser cutting, digital cutting and CNC machining ensure high-quality manufacturing of core belt conveyor components.</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/equip.png" alt="图片7" data-full="pic/equip.png"></div>
+                </div>
+
+                <div class="list-item">
+                    <div style="width: 100%;">
+                        <div class="item-text"><strong>Service Sectors</strong></div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Logistics & Energy</strong> Port terminals, power coal handling, grain terminals</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Industrial Manufacturing</strong> Metallurgy, building materials, chemical industry</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Engineering & Resources</strong> Tunnels, mining</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Environmental Protection</strong> Environmental protection</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/vale.png" alt="图片5" data-full="pic/vale.png"></div>
+                </div>
+
+                <div class="list-item">
+                    <div style="width: 100%;">
+                        <div class="item-text"><strong>Market & Service Coverage</strong></div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Main Service Fields</strong> KDHI's products mainly serve ports, metallurgy, hydropower, tunnels, coal, mining, building materials and chemical industry, enjoying high market recognition and product reputation.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Market Experience</strong> With over 30 years of development, KDHI has established strategic partnerships with dozens of well-known mining and industrial enterprises at home and abroad.</div>
+                        <div class="item-text" style="list-style: disc; margin-left: 20px; display: list-item;"><strong>Project & Global Coverage</strong> The company has supplied key equipment for numerous heavy and large-scale projects in many countries, with products exported to more than 40 countries and regions worldwide.</div>
+                    </div>
+                    <div class="item-thumb"><img src="pic/map.png" alt="图片6" data-full="pic/map.png"></div>
+                </div>
+               
+
+                <div class="list-item download-catalog">
+                    <div class="item-text"><strong>Download Company Profiles</strong></div>
+                    <div class="item-thumb">
+                        <a href="pic/KDHI%20profile.pdf" download title="Download KDHI Profile">
+                            <img src="pic/PDF logo-s.png" alt="Download KDHI Profile" class="pdf-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 模态大图窗口 -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <!-- ========== 公司介绍区域 ========== -->
+        <section class="company-intro" id="about">
+            <div class="intro-container">
+                <div class="section-title">
+                    <h2>Corporate Honors & Social Responsibility</h2>
+                    <p></p>
+                </div>
+
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h3>Certified Guinness China Records</h3>
+
+        <!-- ========== Certified Records 详细信息 ========== -->
+        <div class="records-details">
+            <div class="record">
+                <h4 class="record-title">1. Longest Pipe Belt Conveyor</h4>
+                <p>
+                    Total length: 7.12 km；  Pipe diameter:400mm；
+                    Belt speed: 3.15 m/s； 
+                    Capacity: 800 tph； 
+                    Max lifting height: 275.6m； 
+                    Max downhill drop: -517.6m； 
+                    Head-tail height difference: -242m； 
+                    Location: Bijie, Guizhou, China； 
+                    Commissioned: 2012
+                </p>
+            </div>
+
+            <div class="record">
+                <h4 class="record-title">2. Largest Capacity Belt Conveyor</h4>
+                <p>
+                    Max capacity: 20,000tph； 
+                    Total length: 3,557.79m； 
+                    Quantity: 5 sets of belt conveyors； 
+                    Belt width: 2,200mm；
+                    Model: BW2200mm  
+                    Client: CLN150 VALE, Brazil
+                </p>
+            </div>
+
+            <div class="record">
+                <h4 class="record-title">3. Longest Two-Way Over-Land Belt Conveyor</h4>
+                <p>
+                    Total length: 10.08km；
+                    Belt width: 1,000mm； 
+                    Belt speed: 0.1–4m/s； 
+                    Upper belt: Limestone &amp; cement clinker, 1,200tph； 
+                    Lower belt: Raw coal, 150tph； 
+                    Route: 6 villages, 12 rivers, 30+ undulations； 
+                    Horizontal curves: 6 large-angle (up to 69°)；
+                    Client: Tianshan Cement Co., Ltd., Liyang, Jiangsu； 
+                    Commissioned: July 2022
+                </p>
+            </div>
+
+            <div class="record">
+                <h4 class="record-title">4. Largest Diameter Pulley for Belt Conveyor</h4>
+                <p>
+                    Pulley diameter: 2,500mm； 
+                    Shaft journal: 680mm； 
+                    Shell thickness: 65mm； 
+                    Weight: 48.2tons； 
+                    Max tension: 7,972kN； 
+                    Project: S11D, VALE, Brazil； 
+                    Commissioned: November 2022
+                </p>
+            </div>
+        </div>
+
+        <!-- 新增社会责任标题与编号内容 -->
+        <h3>Social Responsibility & Public Welfare</h3>
+        <div class="records-details">
+            <div class="record">
+                <h4 class="record-title">1. Core Philosophy & Employment Contribution</h4>
+                <p>
+                    Motto: "Remember wealth origin, devote love to the source"
+Response to "West labor to East" policy
+Provided 200+ jobs for Qingpu, Shanghai
+                </p>
+            </div>
+
+            <div class="record">
+                <h4 class="record-title">2. Social Welfare Donations</h4>
+                <p>
+Total donation: Nearly 5 million RMB (recent years)
+Areas: Poverty alleviation, student aid, elderly care, sports
+Beneficiaries: Hundreds of people
+Donation to Brazil primary schools: 500,000 RMB                </p>
+            </div>
+
+            <div class="record">
+                <h4 class="record-title">3. Hope Primary Schools & Special Funds</h4>
+                <p>
+                    Hope Primary Schools: 3 (Dabie Mountains, Guang'an, Sichuan)
+Special Fund: "KDHI Grant-in-Aid Fund" (Red Cross Society)
+Fund Purpose: Poor students' education support
+                </p>
+            </div>
+
+        </div>
+                    </div>
+
+                    <div class="intro-image">
+                        <div class="image-wrapper">
+                            <img src="pic/guinness.png" alt="KDHI Office 1">
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="pic/surpport edu.png" alt="KDHI Office 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 9 宫格图片展示区域 ========== -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <div class="section-title">
+                    <h2>News in Brief</h2>
+                    <p>Key Highlights</p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <!-- 图片 1 -->
+                    <a href="news.html" class="gallery-item">
+                        <img src="pic/surpport edu.png" class="gallery-image">
+                        <div class="gallery-caption">
+                            <h4>Education Charity</h4>
+                            <p>Supporting Hope Primary Schools</p>
+                        </div>
+                    </a>
+
+                    <!-- 图片 2 -->
+                    <a href="news.html" class="gallery-item">
+                        <img src="pic/engineering.png" alt="Project 4" class="gallery-image">
+                        <div class="gallery-caption">
+                            <h4>Engineerying & Designing Teams</h4>
+                            <p>Shenyang Engineerying & Designing Center</p>
+                        </div>
+                    </a>
+
+                    <!-- 图片 3 -->
+                    <a href="news.html" class="gallery-item">
+                        <img src="pic/russia office.png" class="gallery-image">
+                        <div class="gallery-caption">
+                            <h4>Global Support</h4>
+                            <p>With overseas offices strategically located around the world</p>
+                        </div>
+                    </a>
+
+
+                    <!-- 图片 4 -->
+                    <a href="news.html" class="gallery-item">
+                        <img src="pic/fabricate idler.png" alt="Project 7" class="gallery-image">
+                        <div class="gallery-caption">
+                            <h4>In-House Manufacturing</h4>
+                            <p>Idlers, Pulleys, Steel Structures Transfertower...</p>
+                        </div>
+                    </a>
+
+                    <!-- 图片 5 -->
+                    <a href="news.html" class="gallery-item">
+                        <img src="pic/preassembly.png" alt="Project 8" class="gallery-image">
+                        <div class="gallery-caption">
+                            <h4>Shop Pre-Assembly</h4>
+                            <p>We offer shop pre-assembly services tailored to customer requirements</p>
+                        </div>
+                    </a>
+
+                    <!-- 图片 6 -->
+                    <a href="news.html" class="gallery-item">
+                        <img src="pic/Logistics.png" alt="Project 9" class="gallery-image">
+                        <div class="gallery-caption">
+                            <h4>Fast & Convenient Logistics</h4>
+                            <p>280km (3 hours) from Shanghai Port, 230km(2 hours) from Nantong port</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 底部区域（蓝色三栏）========== -->
+        <footer id="contact">
+            <div class="footer-container">
+                <!-- 第一栏：菜单 -->
+                <div class="footer-col">
+                    <h3>Quick Menu</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#gallery"><i class="fas fa-images"></i> Projects</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- 第二栏：公司地址等信息 -->
+                <div class="footer-col">
+                    <h3>Company Information</h3>
+                    <div class="footer-info">
+                        <p><i class="fas fa-map-marker-alt"></i> No.815, Huaqing Road, Qingpu Industrial Zone,Shanghai, China</p>
+                        <p><i class="fas fa-building"></i> Shanghai Keda Heavy Industry Group Co., Ltd..</p>
+                        <p><i class="fas fa-building"></i> Keda Heavy Industry Group (Langxi) Co., Ltd.</p>
+                        <p><i class="fas fa-clock"></i> Mon - Fri: 8:00 AM - 5:00 PM（UTC+8）</p>
+                        <p><i class="fas fa-globe"></i> www.kdhi.com.cn</p>
+                        <p><i class="fas fa-id-card"></i> Business License: 91310000631034493R</p>
+                    </div>
+                </div>
+
+                <!-- 第三栏：5 个联系方式 -->
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><a href="tel:+862169211558"><i class="fas fa-phone"></i> +86 21 6921 1558（Chinese）</a></li>
+                        <li><a href="tel:+8613700009809"><i class="fas fa-mobile-alt"></i> +86 137 0000 9809（English）</a></li>
+                        <li><a href="mailto:info@kdhi.com.cn"><i class="fas fa-envelope"></i> info@kdhi.com.cn</a></li>
+                        <li><a href="mailto:contact@kdhi.com.cn"><i class="fas fa-headset"></i> contact@kdhi.com.cn（Business）</a></li>
+                        <li><a href="https://wechat.com" target="_blank"><i class="fab fa-weixin"></i> WeChat: KDHI_Official</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Shanghai Keda Heavy Industry Group Co., Ltd.  All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <!-- 引入外部 JavaScript 文件 -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
