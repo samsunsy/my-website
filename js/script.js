@@ -79,6 +79,55 @@ if (modal) {
     });
 }
 
+// ========== 九宫格图片双击弹窗 ==========
+const galleryPopup = document.getElementById('galleryPopup');
+const galleryPopupImage = galleryPopup?.querySelector('.gallery-popup-image');
+const galleryPopupTitle = galleryPopup?.querySelector('.gallery-popup-title');
+const galleryPopupText = galleryPopup?.querySelector('.gallery-popup-text');
+const galleryPopupClose = galleryPopup?.querySelector('.gallery-popup-close');
+
+function openGalleryPopup(item) {
+    if (!galleryPopup || !galleryPopupImage || !galleryPopupTitle || !galleryPopupText) return;
+    const img = item.querySelector('img.gallery-image');
+    const title = item.querySelector('.gallery-caption h4')?.textContent || '';
+    const text = item.querySelector('.gallery-caption p')?.textContent || '';
+    const alt = img?.alt || title;
+
+    galleryPopupImage.src = img?.dataset.full || img?.src || '';
+    galleryPopupImage.alt = alt;
+    galleryPopupTitle.textContent = title;
+    galleryPopupText.textContent = text;
+    galleryPopup.classList.add('active');
+    galleryPopup.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGalleryPopup() {
+    if (!galleryPopup) return;
+    galleryPopup.classList.remove('active');
+    galleryPopup.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+if (galleryPopupClose) {
+    galleryPopupClose.addEventListener('click', closeGalleryPopup);
+}
+
+if (galleryPopup) {
+    galleryPopup.addEventListener('click', (e) => {
+        if (e.target === galleryPopup) {
+            closeGalleryPopup();
+        }
+    });
+}
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        openGalleryPopup(item);
+    });
+});
+
 // ========== 平滑滚动到锚点位置 ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
