@@ -1,0 +1,700 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 视频容器 */
+.header-video-container {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+/* 顶部导航栏 横向布局不变，手机不垂直堆叠 */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 24px;
+    color: white;
+}
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    padding-top: 12px;
+}
+.logo {
+    height: 90px;
+    width: auto;
+}
+.company-name {
+    font-size: 39px;
+    font-weight: bold;
+    color: #fff;
+}
+/* 右侧统一容器：电话+导航共用右对齐基准，顶部固定2行距 */
+.top-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+    min-width: 0;
+    width: auto;
+    padding-top: 2em;
+}
+.top-contact {
+    font-size: 12px;
+    line-height: 1.3;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+.contact-separator {
+    display: inline-block;
+}
+.nav-bar {
+    margin-top: 8px;
+    width: fit-content;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: flex-end;
+    margin: 0;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0;
+}
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+/* ========== 标题、副标题布局（彻底解决手机重叠） ========== */
+.hero-text-wrap {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 42%;
+    padding: 0 20px;
+    color: #fff;
+    text-align: center;
+}
+.hero-title {
+    font-size: 42px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.5);
+    font-weight: bold;
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+.hero-subtitle {
+    font-size: 18px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.5);
+    max-width: 92%;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* 底部滚动文字 */
+.scrolling-text-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+.scrolling-text-wrapper {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scrollLeft 35s linear infinite;
+}
+.scrolling-text-item {
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    white-space: nowrap;
+    margin-right: 8ch;
+}
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Profiles标题 */
+.profiles-title-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem 48px 2rem;
+    text-align: center;
+}
+.profiles-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #0a2463; /* darker blue */
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.3em;
+}
+.profiles-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #777777; /* mid-gray underline */
+    bottom: -0.25em;
+}
+
+/* 九宫格通用 */
+.grid-section {
+    padding: 3.5rem 2rem 4rem 2rem;
+    width: 100%;
+}
+.white-bg { background: #fff; }
+.black-30-bg { background: rgba(0,0,0,0.3); }
+.black-50-bg { background: rgba(0,0,0,0.5); color: #fff; }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.grid-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+.grid-item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.grid-item-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 1rem;
+}
+.download-profile-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    text-decoration: none;
+}
+.download-profile-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+.pdf-icon {
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 浮窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.modal-content {
+    background: white;
+    width: min(100%, 900px);
+    max-width: 900px;
+    max-height: calc(100vh - 40px);
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    margin: 20px auto 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.close-btn {
+    position: absolute;
+    top: 15px; 
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.close-btn:hover {
+    background-color: #f0f0f7;
+    color: #ff0000;
+}
+.modal-img {
+    flex: 1 1 400px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.modal-text {
+    flex: 1 1 400px;
+    padding: 2rem;
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Segoe UI', Arial, sans-serif !important;
+}
+.modal-text h3 {
+    margin-bottom: 1rem;
+    color: #0a2463;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Segoe UI', Arial, sans-serif !important;
+}
+.modal-text p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Segoe UI', Arial, sans-serif !important;
+}
+.modal-text strong,
+.modal-text span,
+.modal-text div,
+.modal-text li {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Segoe UI', Arial, sans-serif !important;
+}
+/* 页脚 */
+.footer-container {
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 3rem 2rem;
+}
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+.footer-column {
+    width: 100%;
+    max-width: 300px;
+}
+.footer-column h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    border-bottom: 2px solid #666;
+    padding-bottom: 0.5rem;
+}
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #a8dadc;
+}
+.contact-info p {
+    line-height: 1.2;
+    margin-bottom: 0.7rem;
+    color: #ddd;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: inherit;
+    margin-right: 0.45rem;
+    margin-top: 0.1rem;
+}
+.contact-icon i {
+    font-size: 1rem;
+    line-height: 1;
+    display: block;
+    color: inherit;
+}
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.social-link:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.22);
+}
+.social-link i {
+    font-size: 1.1rem;
+}
+.company-info {
+    text-align: center;
+    padding: 2rem 2rem 1rem;
+    background: rgba(0,0,0,0.6);
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+.company-info p {
+    margin-bottom: 0.5rem;
+}
+.company-info .highlight {
+    color: #fff;
+    font-weight: bold;
+}
+.copyright {
+    background: rgba(0,0,0,0.7);
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+}
+
+/* ===================== 响应式适配 ===================== */
+/* 平板 960px */
+@media (max-width: 960px) {
+    .top-bar {
+        padding: 0 16px;
+    }
+    .logo-name {
+        padding-top: 10px;
+    }
+    .logo {
+        height: 72px;
+    }
+    .company-name {
+        font-size: 28px;
+    }
+    .top-contact {
+        font-size: 11px;
+        gap: 8px;
+    }
+    .nav-menu {
+        gap: 12px;
+    }
+    .nav-menu li a {
+        font-size: 14px;
+    }
+    .hero-title {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    .scrolling-text-container {
+        bottom: 12px;
+        height: 60px;
+    }
+    .scrolling-text-item {
+        font-size: 26px;
+        margin-right: 6ch;
+    }
+    .scrolling-text-wrapper {
+        animation: scrollLeft 30s linear infinite;
+    }
+    .profiles-title {
+        font-size: 34px;
+    }
+}
+
+/* 手机 768px：关键修复！不再把top-bar改成垂直，保持左右横向，右侧容器统一右对齐，不会错位 */
+@media (max-width:768px) {
+    .header-video-container {
+        height: 60vh; /* 加高视频容器，给标题副标题留空间防重叠 */
+    }
+    /* 取消之前错误的 flex-direction:column，保持左右并排 */
+    .top-bar {
+        flex-direction: row !important;
+        padding: 0 12px;
+    }
+    .logo {
+        height: 67.5px;
+    }
+    .company-name {
+        font-size: 24px;
+    }
+    .top-contact {
+        font-size: 10px;
+        gap: 6px;
+    }
+    .nav-menu {
+        gap: 8px;
+    }
+    .nav-menu li a {
+        font-size: 12px;
+    }
+    .hero-text-wrap {
+        top: 38%;
+    }
+    .hero-title {
+        font-size: 28px;
+        margin-bottom: 16px;
+        line-height: 1.4;
+    }
+    .hero-subtitle {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 96%;
+    }
+    .footer-columns {
+        justify-items: flex-start;
+        max-width: 90%;
+    }
+    .footer-column {
+        max-width: 100%;
+    }
+}
+
+/* 超小手机 380px */
+@media (max-width:380px) {
+    .header-video-container {
+        height: 65vh;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .hero-text-wrap {
+        top: 35%;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    .hero-subtitle {
+        font-size: 12px;
+    }
+    .logo {
+        height: 60px;
+    }
+}
+
+/* IE兼容 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .footer-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* About KDHI 两栏介绍 */
+.about-kdhi-intro {
+    padding: 1.5rem 2rem 2.5rem;
+    background: #fff;
+}
+.intro-section-gap {
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+.about-kdhi-intro .intro-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: stretch; /* let columns match height */
+}
+.about-kdhi-intro .intro-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.about-kdhi-intro .intro-image img {
+    width: 100%;
+    height: 100%; /* fill container height to match text */
+    border-radius: 8px;
+    object-fit: cover; /* maintain aspect ratio, crop if needed */
+    display: block;
+}
+.about-kdhi-intro .intro-text.modal-text {
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 0; /* keep font/size from modal-text but control spacing here */
+}
+.about-kdhi-intro .intro-video-container {
+    align-items: stretch;
+}
+.about-kdhi-intro .intro-video-panel {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+}
+.about-kdhi-intro .intro-video {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    background: #000;
+}
+.about-kdhi-intro .intro-text-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 使右侧文字两端对齐，避免出现靠左的参差行 */
+.about-kdhi-intro .intro-text.modal-text p {
+    text-align: left; /* natural paragraph flow */
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none; /* avoid splitting words */
+    word-break: normal;
+    overflow-wrap: normal;
+    text-align-last: left;
+}
+
+/* 在较窄屏幕上仍保持两端对齐，但可在更大断点下折叠为单列 */
+@media (max-width: 420px) {
+    .about-kdhi-intro .intro-text.modal-text p {
+        text-align: left;
+        text-align-last: left;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-kdhi-intro .intro-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .about-kdhi-intro .intro-image {
+        flex: none;
+        max-width: 100%;
+    }
+    /* On narrow screens, let image keep its natural height (don't stretch to match text) */
+    .about-kdhi-intro .intro-image img {
+        height: auto;
+        width: 100%;
+    }
+    /* 在窄视窗下移除横向内边距，让文字从屏幕左到右填满 */
+    .about-kdhi-intro {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-kdhi-intro .intro-container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+        margin: 0;
+    }
+    .about-kdhi-intro .intro-text.modal-text {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .about-kdhi-intro .intro-text.modal-text p {
+        text-align: left;
+        text-align-last: left;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+}
