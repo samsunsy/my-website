@@ -498,6 +498,10 @@
 @media (max-width:768px) {
     .header-video-container {
         height: 60vh; /* 加高视频容器，给标题副标题留空间防重叠 */
+        background-color: #0052D9; /* 腾讯企业蓝，手机模式替代视频 */
+    }
+    .header-video {
+        display: none; /* 手机模式不加载视频 */
     }
     /* 取消之前错误的 flex-direction:column，保持左右并排 */
     .top-bar {
@@ -616,6 +620,16 @@
     max-width: 50%;
     display: flex;
 }
+.about-kdhi-intro .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+}
 .about-kdhi-intro .intro-video {
     width: 100%;
     height: 100%;
@@ -624,6 +638,38 @@
     border-radius: 8px;
     display: block;
     background: #000;
+}
+.about-kdhi-intro .video-play-button {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.about-kdhi-intro .video-play-button .play-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+}
+.about-kdhi-intro .video-play-button .play-icon i {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-left: 4px;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+.about-kdhi-intro .video-play-button.is-hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
 }
 .about-kdhi-intro .intro-text-left {
     display: flex;
@@ -674,12 +720,12 @@
     }
     /* 在窄视窗下移除横向内边距，让文字从屏幕左到右填满 */
     .about-kdhi-intro {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .about-kdhi-intro .intro-container {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 16px;
+        padding-right: 16px;
         max-width: 100%;
         margin: 0;
     }
@@ -696,5 +742,10 @@
         hyphens: none;
         word-break: normal;
         overflow-wrap: normal;
+    }
+    /* 手机模式下浮窗蓝色标题缩小字体和字符间距 */
+    .modal-text h3 {
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;       
     }
 }
