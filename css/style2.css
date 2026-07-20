@@ -495,6 +495,7 @@
 }
 
 /* 手机 768px：关键修复！不再把top-bar改成垂直，保持左右横向，右侧容器统一右对齐，不会错位 */
+/* 手机 768px：logo保持左侧，其他信息居中 */
 @media (max-width:768px) {
     .header-video-container {
         height: 60vh; /* 加高视频容器，给标题副标题留空间防重叠 */
@@ -503,10 +504,15 @@
     .header-video {
         display: none; /* 手机模式不加载视频 */
     }
-    /* 取消之前错误的 flex-direction:column，保持左右并排 */
+    /* 手机端顶部栏：logo在左，其他居中 */
     .top-bar {
         flex-direction: row !important;
+        align-items: flex-start;
+        justify-content: space-between;
         padding: 0 12px;
+    }
+    .logo-name {
+        padding-top: 12px;
     }
     .logo {
         height: 67.5px;
@@ -514,12 +520,19 @@
     .company-name {
         font-size: 24px;
     }
-    /* 手机端Phone和Email分成两行 */
+    /* 手机端右侧容器居中 */
+    .top-right {
+        align-items: center;
+        padding-top: 2em;
+        width: auto;
+    }
+    /* 手机端Phone和Email分成两行并居中 */
     .top-contact {
         font-size: 10px;
-        gap: 6px;
+        gap: 4px;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        text-align: center;
     }
     .contact-separator {
         display: none;
@@ -536,7 +549,6 @@
     .nav-menu li a {
         font-size: 12px;
     }
-
 
     .hero-text-wrap {
         top: 38%;
