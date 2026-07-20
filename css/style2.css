@@ -514,16 +514,30 @@
     .company-name {
         font-size: 24px;
     }
+    /* 手机端Phone和Email分成两行 */
     .top-contact {
         font-size: 10px;
         gap: 6px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .contact-separator {
+        display: none;
+    }
+    /* 手机端菜单居中 */
+    .nav-bar {
+        width: 100%;
+        text-align: center;
     }
     .nav-menu {
         gap: 8px;
+        justify-content: center;
     }
     .nav-menu li a {
         font-size: 12px;
     }
+
+
     .hero-text-wrap {
         top: 38%;
     }
