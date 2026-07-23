@@ -5,6 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
+p {
+    margin-bottom: 1.5rem;
+}
+
 /* 视频容器 */
 .header-video-container {
     position: relative;
@@ -379,7 +383,7 @@
     line-height: 1.8;
     font-size: 1.05rem;
     color: #555;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Segoe UI', Arial, sans-serif !important;
 }
 .modal-text strong,
@@ -429,7 +433,7 @@
 }
 .contact-info p {
     line-height: 1.2;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1.05rem;
     color: #ddd;
     display: flex;
     align-items: flex-start;
@@ -486,7 +490,7 @@
     line-height: 1.8;
 }
 .company-info p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 .company-info .highlight {
     color: #fff;
@@ -552,6 +556,10 @@
 /* 手机 768px：关键修复！不再把top-bar改成垂直，保持左右横向，右侧容器统一右对齐，不会错位 */
 /* 手机 768px：logo保持左侧，其他信息居中 */
 @media (max-width:768px) {
+    body, p, li, span, div, td, th {
+        font-size: 16px;
+        line-height: 1.6;
+    }
     .header-video-container {
         height: 60vh; /* 加高视频容器，给标题副标题留空间防重叠 */
         background-color: #0052D9; /* 腾讯企业蓝，手机模式替代视频 */
@@ -767,7 +775,7 @@
     text-align: left; /* natural paragraph flow */
     font-size: 1.25rem;
     line-height: 1.5;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none; /* avoid splitting words */
@@ -1015,7 +1023,7 @@ ul.convey-list li strong {
 }
 
 .about-panel-body p {
-    margin: 0 0 0.9rem 0;
+    margin: 0 0 1.35rem 0;
 }
 
 .about-panel-body strong {
