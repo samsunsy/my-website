@@ -765,7 +765,7 @@
 /* 使右侧文字两端对齐，避免出现靠左的参差行 */
 .about-kdhi-intro .intro-text.modal-text p {
     text-align: left; /* natural paragraph flow */
-    font-size: 1.45rem;
+    font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: 0.8rem;
     -webkit-hyphens: none;
@@ -828,6 +828,16 @@
         hyphens: none;
         word-break: normal;
         overflow-wrap: normal;
+        font-size: 1rem;
+    }
+    ul.convey-list {
+        font-size: 15px;
+    }
+    ul.convey-list li {
+        font-size: 15px;
+    }
+    ul.convey-list li strong {
+        font-size: 15px;
     }
     /* 手机模式下浮窗蓝色标题缩小字体和字符间距 */
     .modal-text h3 {
@@ -857,18 +867,18 @@ ul.convey-list {
   padding-left: 1em;
   margin: 0;
   /* 强制继承外层文字字号，不会变小 */
-  font-size: 20px;
+  font-size: 18px;
 }
 ul.convey-list li {
   text-indent: -1em;
   margin: 8px 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 ul.convey-list li::before {
   content: "- ";
 }
 ul.convey-list li strong {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* ==================== About KDHI - Sidebar + Content Layout ==================== */
@@ -888,12 +898,27 @@ ul.convey-list li strong {
     flex: 0 0 260px;
     background: #0052D9;
     padding: 2rem 0;
+    position: relative;
+}
+
+.about-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .about-nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .about-nav-list li {
@@ -920,9 +945,10 @@ ul.convey-list li strong {
 }
 
 .about-nav-item.active {
-    background: rgba(255, 255, 255, 0.18);
-    border-left: 4px solid #fff;
+    background: #fff;
+    border-left: 4px solid #0052D9;
     font-weight: 600;
+    color: #0052D9;
 }
 
 .about-nav-item-bold {
@@ -1058,7 +1084,9 @@ ul.convey-list li strong {
     }
     .about-nav-item.active {
         border-left: none;
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid #0052D9;
+        background: #fff;
+        color: #0052D9;
     }
     .about-content-wrap {
         padding: 1.5rem 1.2rem;
@@ -1075,7 +1103,7 @@ ul.convey-list li strong {
         max-width: 100%;
     }
     .about-panel-body {
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
@@ -1087,7 +1115,7 @@ ul.convey-list li strong {
     .about-content-title {
         font-size: 20px;
     }
-    .about-content-body h3 {
-        font-size: 17px;
+    .about-panel-body h3 {
+        font-size: 13px;
     }
 }
