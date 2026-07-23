@@ -10,6 +10,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- 外部引入样式 -->
     <link rel="stylesheet" href="css/style2.css">
+
+<style>
+/* ========== About页面专属布局｜左侧图片竖向排列，图片之间拥有行间距 ========== */
+.about-panel-row {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+/* 左侧图片容器：固定宽度，内部图片竖排 */
+.about-panel-img {
+    flex: 0 0 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px; /* 控制多张图片之间的垂直间距，自行调整数值大小 */
+}
+
+.about-panel-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* 右侧文字区域 */
+.about-panel-body {
+    flex: 1;
+}
+
+/* 移动端自动切换上下竖排 */
+@media screen and (max-width: 992px) {
+    .about-panel-row {
+        flex-direction: column;
+    }
+    .about-panel-img {
+        flex: unset;
+        width: 100%;
+    }
+}
+</style>
 </head>
 <body>
 
@@ -101,16 +142,16 @@
                     <p style="margin-top:1.5rem;">KDHI, Established in 1993, is a global technology leader specializing in advanced equipment and heavy machinery 
                         manufacturing for bulk material handling systems (specially belt conveyors and its systems includes main components like Idler,pulley,drive, 
                         steelworks, and control system). we have grown to serve clients across over 50 countries in mining, ports, metallurgy, chemical, 
-                        grain and other industries.<br>
-                        We own 4 production bases & 33 independent patented technologies. Our team of over 800 staff includes 126 senior professional engineers, 
-                        complying with global standards like GB, ISO, CEMA, AS, DIN, JS, EC and GOST... .<br>
-                        Our mission is to empower industries with cutting-edge conveying technology, enabling them to achieve operational excellence and sustainable growth.
-                        We combine expertise in belt conveyor design, manufacturing, and lifecycle management to deliver comprehensive solutions.<br>
-                        KDHI delivers fully integrated solutions for belt conveyor systems, from design and engineering to manufacturing, 
+                        grain and other industries.</p>
+                    <p style="margin-top:1.5rem;">We own 4 production bases & 33 independent patented technologies. Our team of over 800 staff includes 126 senior professional engineers, 
+                        complying with global standards like GB, ISO, CEMA, AS, DIN, JS, EC and GOST... .</p>
+                    <p style="margin-top:1.5rem;">Our mission is to empower industries with cutting-edge conveying technology, enabling them to achieve operational excellence and sustainable growth.
+                        We combine expertise in belt conveyor design, manufacturing, and lifecycle management to deliver comprehensive solutions.</p>
+                    <p style="margin-top:1.5rem;">KDHI delivers fully integrated solutions for belt conveyor systems, from design and engineering to manufacturing, 
                         installation, and long-term lifecycle support. Our expertise helps customers improve efficiency, reliability, and safety across mining, ports, 
-                        metallurgy, power, and chemical industries.<br>
-                        With a strong R&D base, advanced manufacturing capabilities, and a global service network, KDHI continues to provide cost-effective and 
-                        innovative conveying technology for large-scale industrial projects worldwide.<br><br>
+                        metallurgy, power, and chemical industries.</p> 
+                    <p style="margin-top:1.5rem;"> With a strong R&D base, advanced manufacturing capabilities, and a global service network, KDHI continues to provide cost-effective and 
+                        innovative conveying technology for large-scale industrial projects worldwide.</p>
                         We can provide a wide range of belt conveyor solutions, including:<br>
 
                     <ul class="about-bullet-list">
@@ -155,13 +196,17 @@
             <div class="about-panel-row">
                 <div class="about-panel-img">
                     <img src="img/engineering.webp" alt="Engineering Detail">
+                    <img src="img/engineering1.webp" alt="Engineering1 Detail">
+                    <img src="img/mtrlflow.webp" alt="Material flow Detail">
+
                 </div>
+                
                 <div class="about-panel-body">
                     <p><strong>▪ Strong R&amp;D Capability</strong>  With strong R&amp;D strength, Shanghai Keda Heavy Industry Group has an R&amp;D team composed of top engineering technicians and world-leading design software.</p>
                     <p><strong>▪ Professional Technical Team</strong>  KDHI has 126 intermediate and senior technicians, including 6 professors of engineering and 25 senior engineers, covering mechanics, steel structure, power distribution, control and inspection.</p>
                     <p><strong>▪ Proprietary Core Technologies</strong>  Possessing 33 proprietary design technologies for belt conveyors with independent intellectual property rights, as well as extensive experience in design, manufacturing, operation and maintenance of belt conveyors.</p>
                     <p><strong>▪ Patents &amp; Awards</strong>  KDHI has won numerous national, provincial and municipal Science and Technology Progress Awards and Key New Product Awards. A total of 196 invention and utility model patents have been applied for and granted.</p>
-                    <p><strong>▪ International Standard Services</strong>  The Group can provide global customers with full life cycle design, production and inspection services complying with <strong>GB, ISO, EN, CEMA, DIN, AS JIS</strong> and <strong>ГОСТ</strong> standards.</p>
+                    <p><strong>▪ International Standard Services</strong>  The Group can provide global customers with full life cycle design, production and inspection services complying with <strong>GB, ISO, EN, CEMA, DIN, AS, JIS</strong> and <strong>ГОСТ</strong> standards.</p>
                 </div>
             </div>
         </div>
@@ -171,7 +216,8 @@
             <h2 class="about-content-title">Industrial Equipment</h2>
             <div class="about-panel-row">
                 <div class="about-panel-img">
-                    <img src="img/equip.webp" alt="Industrial Equipment">
+                    <img src="img/equip.webp" alt="fabricate of idler">
+                    <img src="img/fabricate.webp" alt="fabricate of pulley">
                 </div>
                 <div class="about-panel-body">
                     <p>Shanghai Keda Heavy Industry Group has introduced the world's most advanced belt conveyor production and processing technology and proprietary production equipment, realized the intelligent manufacturing of general and standard components. The main production equipment includes:</p>
@@ -190,7 +236,9 @@
             <h2 class="about-content-title">Main Component Fabrication</h2>
             <div class="about-panel-row">
                 <div class="about-panel-img">
-                    <img src="img/fabricate.webp" alt="Main Component Fabrication">
+                    <img src="img/pulley1.webp" alt="Main Component Fabrication pulley">
+                    <img src="img/fabricate idler.webp" alt="Main Component Fabrication idler">
+                    <img src="img/equip.webp" alt="Main Component Fabrication steelworks">
                 </div>
 
                 <div class="about-panel-body">
@@ -212,7 +260,10 @@
             <h2 class="about-content-title">KDHI Company Milestones</h2>
             <div class="about-panel-row">
                 <div class="about-panel-img">
-                    <img src="img/plant.webp" alt="KDHI Plant">
+                    <img src="img/oldplant.webp" alt="KDHI oldPlant">
+                    <img src="img/blasterbc1.webp" alt="KDHI Blaster conveyor">
+                    <img src="img/dlbc.webp" alt="Iron ore yard conveyor">
+                    <img src="img/plant.webp" alt="KDHI Langxi manufacturing base">
                 </div>
                 <div class="about-panel-body">
                     <p><strong>1993</strong><br>
@@ -247,13 +298,15 @@
             <div class="about-panel-row">
                 <div class="about-panel-img">
                     <img src="img/Logistics.webp" alt="Transportation & Logistics">
+                    <img src="img/langxishmap.webp" alt="Logistics Langxi to Shanghai port">
+                    <img src="img/langxintmap.webp" alt="Logistics Langxi to Nantong port">
                 </div>
                 <div class="about-panel-body">
                     <p>KDHI headquarters and manufacturing facilities, including our Langxi production base, benefit from well-connected highway logistics networks. The Langxi plant is merely 226 kilometers from Nantong Port and 297 kilometers from Shanghai Port via national expressways. Relying on mature local freight services, large-volume goods can be quickly gathered and delivered to major seaports within a short time frame, greatly shortening lead time for global shipments.</p>
                     <p><strong>1. Shanghai Port Terminal</strong><br>
-                     297 Km with 3.5 hour travel time from Langxi manufacturing base.</p>
+                     380 Km with 4.5 hour travel time from Langxi manufacturing base.</p>
                     <p><strong>2. Nantong Port Terminal</strong><br>
-                     226 Km with 2-hour-40-minute highway trip from Langxi manufacturing base.</p>
+                     254 Km with 3-hour-21-minute highway trip from Langxi manufacturing base.</p>
                 </div>
             </div>
         </div>
