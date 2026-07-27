@@ -571,65 +571,73 @@ p {
     /* 手机端顶部栏：logo在上，其他信息三行整体居中 */
     .top-bar {
         flex-direction: column !important;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 0 12px;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 0 12px !important;
     }
     .logo-name {
-        padding-top: 12px;
-        width: 100%;
-        justify-content: center;
+        padding-top: 12px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        display: flex !important;
     }
     .logo {
-        height: 67.5px;
+        height: 67.5px !important;
     }
     .company-name {
-        font-size: 24px;
+        font-size: 24px !important;
     }
     /* 手机端右侧容器占满宽度并居中 */
     .top-right {
-        align-items: center;
-        padding-top: 1em;
-        width: 100%;
+        align-items: center !important;
+        justify-content: center !important;
+        padding-top: 1em !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
     /* 手机端Phone和Email分成两行并居中，行间距和字体缩小 */
     .top-contact {
-        font-size: 9px;
-        gap: 2px;
-        line-height: 1.2;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        font-size: 9px !important;
+        gap: 2px !important;
+        line-height: 1.2 !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        display: flex !important;
     }
     .contact-separator {
-        display: none;
+        display: none !important;
     }
     /* 手机端菜单居中，字体缩小确保一行显示 */
     .nav-bar {
-        width: 100%;
-        text-align: center;
-        margin-top: 4px;
+        width: 100% !important;
+        text-align: center !important;
+        margin-top: 4px !important;
     }
     .nav-menu {
-        gap: 5px;
-        justify-content: center;
+        gap: 5px !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        display: flex !important;
     }
     .nav-menu li a {
-        font-size: 10px;
+        font-size: 10px !important;
     }
 
     .hero-text-wrap {
-        top: 35%;
+        top: 35% !important;
     }
     .hero-title {
-        font-size: 22px;
-        margin-bottom: 10px;
-        line-height: 1.3;
+        font-size: 22px !important;
+        margin-bottom: 10px !important;
+        line-height: 1.3 !important;
     }
     .hero-subtitle {
-        font-size: 12px;
-        line-height: 1.4;
-        max-width: 96%;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        max-width: 96% !important;
     }
     .footer-columns {
         justify-items: flex-start;
@@ -643,34 +651,34 @@ p {
 /* 超小手机 380px */
 @media (max-width:380px) {
     .header-video-container {
-        height: 65vh;
+        height: 65vh !important;
     }
     .top-contact {
-        font-size: 8px;
-        gap: 1px;
+        font-size: 8px !important;
+        gap: 1px !important;
     }
     .nav-menu {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 3px;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        gap: 3px !important;
     }
     .nav-menu li a {
-        font-size: 8.5px;
+        font-size: 8.5px !important;
     }
     .hero-text-wrap {
-        top: 33%;
+        top: 33% !important;
     }
     .hero-title {
-        font-size: 18px;
-        margin-bottom: 8px;
-        line-height: 1.25;
+        font-size: 18px !important;
+        margin-bottom: 8px !important;
+        line-height: 1.25 !important;
     }
     .hero-subtitle {
-        font-size: 10.5px;
-        line-height: 1.3;
+        font-size: 10.5px !important;
+        line-height: 1.3 !important;
     }
     .logo {
-        height: 60px;
+        height: 60px !important;
     }
 }
 
