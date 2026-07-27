@@ -52,6 +52,7 @@ p {
     align-items: flex-start;
     padding: 0 24px;
     color: white;
+    box-sizing: border-box;
 }
 .logo-name {
     display: flex;
@@ -561,7 +562,7 @@ p {
         line-height: 1.6;
     }
     .header-video-container {
-        height: 60vh; /* 加高视频容器，给标题副标题留空间防重叠 */
+        height: 66vh !important; /* 加高视频容器，给两行菜单+标题留足空间 */
         background-color: #0052D9; /* 腾讯企业蓝，手机模式替代视频 */
     }
     .header-video {
@@ -572,10 +573,11 @@ p {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: flex-start !important;
-        padding: 0 12px !important;
+        padding: 0 8px !important;
+        box-sizing: border-box !important;
     }
     .logo-name {
-        padding-top: 8px !important;
+        padding-top: 6px !important;
         padding-bottom: 0 !important;
         margin-bottom: 0 !important;
         width: 100% !important;
@@ -583,10 +585,10 @@ p {
         display: flex !important;
     }
     .logo {
-        height: 67.5px !important;
+        height: 62px !important;
     }
     .company-name {
-        font-size: 24px !important;
+        font-size: 20px !important;
     }
     /* 手机端右侧容器占满宽度并居中，顶部间距最小 */
     .top-right {
@@ -605,38 +607,48 @@ p {
     .contact-separator {
         display: none !important;
     }
-    /* 手机端菜单直接放logo下面，字体放大一号 */
+    /* 手机端菜单直接放logo下面，加左右安全内边距防切字 */
     .nav-bar {
         width: 100% !important;
         text-align: center !important;
-        margin-top: 0.3em !important;
-        padding: 0 !important;
+        margin-top: 0 !important;
+        padding: 4px 10px 6px 10px !important;
+        box-sizing: border-box !important;
     }
     .nav-menu {
-        gap: 10px !important;
+        gap: 4px 12px !important;
+        row-gap: 2px !important;
         justify-content: center !important;
         flex-wrap: wrap !important;
         display: flex !important;
+        align-items: center !important;
         margin: 0 !important;
         padding: 0 !important;
     }
     .nav-menu li a {
-        font-size: 13px !important;
+        font-size: 12px !important;
+        padding: 5px 10px !important;
+        display: block !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
         line-height: 1.4 !important;
+    }
+    .nav-menu li {
+        overflow: visible !important;
     }
 
     .hero-text-wrap {
-        top: 35% !important;
+        top: 40% !important;
     }
     /* 主标题行间距缩小到最小 */
     .hero-title {
-        font-size: 22px !important;
+        font-size: 20px !important;
         margin-bottom: 10px !important;
         line-height: 1.15 !important;
     }
     .hero-subtitle {
-        font-size: 12px !important;
-        line-height: 1.4 !important;
+        font-size: 11px !important;
+        line-height: 1.5 !important;
         max-width: 96% !important;
     }
     .footer-columns {
@@ -651,12 +663,22 @@ p {
 /* 超小手机 380px */
 @media (max-width:380px) {
     .header-video-container {
-        height: 65vh !important;
+        height: 72vh !important;
+    }
+    .top-bar {
+        padding: 0 6px !important;
+        box-sizing: border-box !important;
     }
     .logo-name {
-        padding-top: 6px !important;
+        padding-top: 5px !important;
         padding-bottom: 0 !important;
         margin-bottom: 0 !important;
+    }
+    .logo {
+        height: 56px !important;
+    }
+    .company-name {
+        font-size: 17px !important;
     }
     .top-right {
         padding-top: 0 !important;
@@ -666,32 +688,40 @@ p {
         display: none !important;
     }
     .nav-bar {
-        margin-top: 0.2em !important;
+        margin-top: 0 !important;
+        padding: 3px 8px 5px 8px !important;
+        box-sizing: border-box !important;
     }
     .nav-menu {
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 6px !important;
+        align-items: center !important;
+        gap: 2px 8px !important;
+        row-gap: 1px !important;
     }
     .nav-menu li a {
         font-size: 11px !important;
+        padding: 4px 8px !important;
+        display: block !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
         line-height: 1.3 !important;
     }
+    .nav-menu li {
+        overflow: visible !important;
+    }
     .hero-text-wrap {
-        top: 33% !important;
+        top: 42% !important;
     }
     /* 主标题行间距缩小到最小 */
     .hero-title {
-        font-size: 18px !important;
+        font-size: 17px !important;
         margin-bottom: 8px !important;
         line-height: 1.1 !important;
     }
     .hero-subtitle {
-        font-size: 10.5px !important;
-        line-height: 1.3 !important;
-    }
-    .logo {
-        height: 60px !important;
+        font-size: 10px !important;
+        line-height: 1.4 !important;
     }
 }
 
@@ -1182,17 +1212,25 @@ ul.convey-list li strong {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: flex-start !important;
+        padding: 0 8px !important;
+        box-sizing: border-box !important;
     }
     /* Logo居中，底部不留空 */
     .logo-name {
         display: flex !important;
         justify-content: center !important;
-        padding-top: 8px !important;
+        padding-top: 6px !important;
         padding-bottom: 0 !important;
         margin-bottom: 0 !important;
         width: 100% !important;
     }
-    /* 右侧容器全宽，不留顶部间距 */
+    .logo {
+        height: 62px !important;
+    }
+    .company-name {
+        font-size: 20px !important;
+    }
+    /* 右侧容器全宽，不留顶部间距，菜单紧贴logo */
     .top-right {
         display: flex !important;
         flex-direction: column !important;
@@ -1202,23 +1240,34 @@ ul.convey-list li strong {
         padding-top: 0 !important;
         margin-top: 0 !important;
     }
-    /* 导航菜单紧贴Logo下方 */
+    /* 导航菜单紧贴Logo下方，加左右安全内边距 */
     .nav-bar {
-        margin-top: 0.3em !important;
+        margin-top: 0 !important;
         padding-top: 0 !important;
         width: 100% !important;
+        padding: 4px 10px 6px 10px !important;
+        box-sizing: border-box !important;
     }
     .nav-menu {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 10px !important;
+        align-items: center !important;
+        gap: 4px 12px !important;
+        row-gap: 2px !important;
         margin: 0 !important;
         padding: 0 !important;
     }
-    /* 菜单项字体放大一号 */
+    /* 菜单项加足够的左右内边距，彻底防止边缘切字 */
     .nav-menu li a {
-        font-size: 13px !important;
+        font-size: 12px !important;
+        padding: 5px 10px !important;
+        display: block !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+    }
+    .nav-menu li {
+        overflow: visible !important;
     }
     /* Hero主标题行间距最小 */
     .hero-title {
@@ -1229,19 +1278,42 @@ ul.convey-list li strong {
 /* ========== 超小屏最终强制样式 ========== */
 @media screen and (max-width: 380px) {
     .logo-name {
-        padding-top: 6px !important;
+        padding-top: 5px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .logo {
+        height: 56px !important;
+    }
+    .company-name {
+        font-size: 17px !important;
+    }
+    .top-bar {
+        padding: 0 6px !important;
     }
     .nav-bar {
-        margin-top: 0.2em !important;
+        margin-top: 0 !important;
+        padding: 3px 8px 5px 8px !important;
     }
     .nav-menu {
-        gap: 6px !important;
+        gap: 2px 8px !important;
+        row-gap: 1px !important;
     }
     .nav-menu li a {
         font-size: 11px !important;
+        padding: 4px 8px !important;
+        display: block !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+    }
+    .nav-menu li {
+        overflow: visible !important;
     }
     .hero-title {
         line-height: 1.1 !important;
+    }
+    .header-video-container {
+        height: 70vh !important;
     }
 }
 
@@ -1255,95 +1327,132 @@ ul.convey-list li strong {
         display: none !important;
     }
 
-    /* 顶部栏垂直布局，居中对齐 */
+    /* 顶部栏垂直布局，居中对齐，加大左右内边距防止切字 */
     .top-bar {
         flex-direction: column !important;
         align-items: center !important;
-        padding: 0 12px !important;
+        padding: 0 8px !important;  /* 稍微减小，让菜单可用宽度更大 */
+        box-sizing: border-box !important;
     }
 
     /* Logo区域居中 */
     .logo-name {
         width: 100% !important;
         justify-content: center !important;
-        padding-top: 8px !important;
+        padding-top: 6px !important;  /* logo再上移一点，给菜单更多空间 */
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
     }
     .logo {
-        height: 66px !important;
+        height: 62px !important;  /* logo稍微缩小，给菜单更多垂直空间 */
     }
     .company-name {
-        font-size: 22px !important;
+        font-size: 20px !important;  /* 公司名缩小一点 */
     }
 
-    /* 右侧容器取消多余上边距，菜单上移填补空白 */
+    /* 右侧容器取消多余上边距，菜单完全紧贴logo下方 */
     .top-right {
         width: 100% !important;
         align-items: center !important;
-        padding-top: 4px !important;  /* 很小间距，紧贴logo下方 */
+        padding-top: 0 !important;
         margin-top: 0 !important;
     }
 
-    /* 导航容器紧贴上方，消除大片空白 */
+    /* 导航容器紧贴上方，加足够的左右内边距防止切字 */
     .nav-bar {
         margin-top: 0 !important;
         width: 100% !important;
+        padding: 4px 10px 6px 10px !important;  /* 加大左右内边距到10px，绝对防止切字 */
+        box-sizing: border-box !important;
     }
 
-    /* 导航菜单核心：允许换行，自动扩展到下一行 */
+    /* 导航菜单核心：允许换行，减小间距促使Contact自然换到下一行 */
     .nav-menu {
         display: flex !important;
-        flex-wrap: wrap !important;    /* 关键：允许自动换行 */
+        flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 7px !important;              /* 缩小间距节省空间 */
+        align-items: center !important;
+        gap: 4px 12px !important;  /* 横向间距略大，让Contact更快换行；行间距4px保持紧凑 */
         padding: 0 !important;
+        margin: 0 !important;
+        row-gap: 2px !important;  /* 换行后的两行之间距离很小，紧凑不占位 */
     }
 
-    /* 导航链接字号压缩，适配屏幕宽度 */
+    /* 导航链接：加大左右内边距，确保H和t不被切 */
     .nav-menu li a {
         font-size: 12px !important;
-        padding: 4px 3px !important;
+        padding: 5px 10px !important;  /* 左右10px的安全空间，彻底解决切字 */
+        display: block !important;
+        white-space: nowrap !important;  /* 单个菜单项保持完整单词 */
+        overflow: visible !important;
+    }
+    .nav-menu li {
+        overflow: visible !important;
     }
 
     /* ========== BANNER文字防遮挡重点 ========== */
-    /* 整体标题区域往下微调，避免被顶部导航压住 */
+    /* 整体标题区域再往下调，避开两行菜单 */
     .hero-text-wrap {
-        top: 38% !important;
+        top: 40% !important;
         padding: 0 12px;
     }
     .hero-title {
-        font-size: 22px !important;
+        font-size: 20px !important;
         line-height: 1.2 !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 10px !important;
     }
     .hero-subtitle {
-        font-size: 12px !important;
+        font-size: 11px !important;
         line-height: 1.5 !important;
     }
 
-    /* 视频容器高度微调，给文字留出足够空间 */
+    /* 视频容器高度再增加，确保两行菜单+标题全部容下 */
     .header-video-container {
-        height: 62vh !important;
+        height: 66vh !important;
     }
 }
 
 /* ========== 超小屏 380px 微调 ========== */
 @media screen and (max-width: 380px) {
     .logo {
-        height: 60px !important;
+        height: 56px !important;
     }
     .company-name {
-        font-size: 19px !important;
+        font-size: 17px !important;
+    }
+    .top-bar {
+        padding: 0 6px !important;
+        box-sizing: border-box !important;
+    }
+    .nav-bar {
+        margin-top: 0 !important;
+        padding: 3px 8px 5px 8px !important;
+        box-sizing: border-box !important;
     }
     .nav-menu {
-        gap: 4px !important;
+        gap: 2px 8px !important;
+        row-gap: 1px !important;
     }
     .nav-menu li a {
         font-size: 11px !important;
+        padding: 4px 8px !important;
+        display: block !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+    }
+    .nav-menu li {
+        overflow: visible !important;
     }
     .hero-text-wrap {
-        top: 36% !important;
+        top: 42% !important;
     }
     .hero-title {
-        font-size: 18px !important;
+        font-size: 17px !important;
+    }
+    .hero-subtitle {
+        font-size: 10px !important;
+    }
+    .header-video-container {
+        height: 72vh !important;
     }
 }
