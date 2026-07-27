@@ -112,8 +112,7 @@ p {
     gap: 18px;
     justify-content: flex-end;
     margin: 0;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    flex-wrap: wrap;
     padding: 0;
 }
 .nav-menu li a {
@@ -616,7 +615,7 @@ p {
     .nav-menu {
         gap: 10px !important;
         justify-content: center !important;
-        flex-wrap: nowrap !important;
+        flex-wrap: wrap !important;
         display: flex !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -670,7 +669,7 @@ p {
         margin-top: 0.2em !important;
     }
     .nav-menu {
-        flex-wrap: nowrap !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
         gap: 6px !important;
     }
@@ -1211,7 +1210,7 @@ ul.convey-list li strong {
     }
     .nav-menu {
         display: flex !important;
-        flex-wrap: nowrap !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
         gap: 10px !important;
         margin: 0 !important;
@@ -1290,20 +1289,18 @@ ul.convey-list li strong {
         width: 100% !important;
     }
 
-    /* 导航菜单核心：禁止换行，横向一行显示 */
+    /* 导航菜单核心：允许换行，自动扩展到下一行 */
     .nav-menu {
         display: flex !important;
-        flex-wrap: nowrap !important;    /* 关键：禁止自动换行 */
+        flex-wrap: wrap !important;    /* 关键：允许自动换行 */
         justify-content: center !important;
         gap: 7px !important;              /* 缩小间距节省空间 */
         padding: 0 !important;
-        overflow-x: auto;                 /* 极限小屏允许横向滚动，防止布局崩坏 */
     }
 
     /* 导航链接字号压缩，适配屏幕宽度 */
     .nav-menu li a {
         font-size: 12px !important;
-        white-space: nowrap !important;   /* 单个文字不换行 */
         padding: 4px 3px !important;
     }
 
