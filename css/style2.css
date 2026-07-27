@@ -568,15 +568,17 @@ p {
     .header-video {
         display: none; /* 手机模式不加载视频 */
     }
-    /* 手机端顶部栏：logo在左，其他居中 */
+    /* 手机端顶部栏：logo在上，其他信息三行整体居中 */
     .top-bar {
-        flex-direction: row !important;
-        align-items: flex-start;
-        justify-content: space-between;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: flex-start;
         padding: 0 12px;
     }
     .logo-name {
         padding-top: 12px;
+        width: 100%;
+        justify-content: center;
     }
     .logo {
         height: 67.5px;
@@ -584,11 +586,11 @@ p {
     .company-name {
         font-size: 24px;
     }
-    /* 手机端右侧容器居中 */
+    /* 手机端右侧容器占满宽度并居中 */
     .top-right {
         align-items: center;
-        padding-top: 2em;
-        width: auto;
+        padding-top: 1em;
+        width: 100%;
     }
     /* 手机端Phone和Email分成两行并居中 */
     .top-contact {
