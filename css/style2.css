@@ -1163,3 +1163,190 @@ ul.convey-list li strong {
         font-size: 13px;
     }
 }
+
+/* ========== 手机端最终强制样式（放最后，绝对生效） ========== */
+@media screen and (max-width: 768px) {
+    /* 隐藏Phone和Email */
+    .top-contact {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+    }
+    .contact-separator {
+        display: none !important;
+    }
+    /* 顶部栏垂直居中布局 */
+    .top-bar {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+    /* Logo居中，底部不留空 */
+    .logo-name {
+        display: flex !important;
+        justify-content: center !important;
+        padding-top: 8px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        width: 100% !important;
+    }
+    /* 右侧容器全宽，不留顶部间距 */
+    .top-right {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    /* 导航菜单紧贴Logo下方 */
+    .nav-bar {
+        margin-top: 0.3em !important;
+        padding-top: 0 !important;
+        width: 100% !important;
+    }
+    .nav-menu {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    /* 菜单项字体放大一号 */
+    .nav-menu li a {
+        font-size: 13px !important;
+    }
+    /* Hero主标题行间距最小 */
+    .hero-title {
+        line-height: 1.15 !important;
+    }
+}
+
+/* ========== 超小屏最终强制样式 ========== */
+@media screen and (max-width: 380px) {
+    .logo-name {
+        padding-top: 6px !important;
+    }
+    .nav-bar {
+        margin-top: 0.2em !important;
+    }
+    .nav-menu {
+        gap: 6px !important;
+    }
+    .nav-menu li a {
+        font-size: 11px !important;
+    }
+    .hero-title {
+        line-height: 1.1 !important;
+    }
+}
+
+/* ========== 手机端 768px 最终优化规则 ========== */
+@media screen and (max-width: 768px) {
+    /* 1. 彻底隐藏电话邮箱栏 */
+    .top-contact {
+        display: none !important;
+    }
+    .contact-separator {
+        display: none !important;
+    }
+
+    /* 顶部栏垂直布局，居中对齐 */
+    .top-bar {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 12px !important;
+    }
+
+    /* Logo区域居中 */
+    .logo-name {
+        width: 100% !important;
+        justify-content: center !important;
+        padding-top: 8px !important;
+    }
+    .logo {
+        height: 66px !important;
+    }
+    .company-name {
+        font-size: 22px !important;
+    }
+
+    /* 右侧容器取消多余上边距，菜单上移填补空白 */
+    .top-right {
+        width: 100% !important;
+        align-items: center !important;
+        padding-top: 4px !important;  /* 很小间距，紧贴logo下方 */
+        margin-top: 0 !important;
+    }
+
+    /* 导航容器紧贴上方，消除大片空白 */
+    .nav-bar {
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 导航菜单核心：禁止换行，横向一行显示 */
+    .nav-menu {
+        display: flex !important;
+        flex-wrap: nowrap !important;    /* 关键：禁止自动换行 */
+        justify-content: center !important;
+        gap: 7px !important;              /* 缩小间距节省空间 */
+        padding: 0 !important;
+        overflow-x: auto;                 /* 极限小屏允许横向滚动，防止布局崩坏 */
+    }
+
+    /* 导航链接字号压缩，适配屏幕宽度 */
+    .nav-menu li a {
+        font-size: 12px !important;
+        white-space: nowrap !important;   /* 单个文字不换行 */
+        padding: 4px 3px !important;
+    }
+
+    /* ========== BANNER文字防遮挡重点 ========== */
+    /* 整体标题区域往下微调，避免被顶部导航压住 */
+    .hero-text-wrap {
+        top: 38% !important;
+        padding: 0 12px;
+    }
+    .hero-title {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 12px !important;
+    }
+    .hero-subtitle {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 视频容器高度微调，给文字留出足够空间 */
+    .header-video-container {
+        height: 62vh !important;
+    }
+}
+
+/* ========== 超小屏 380px 微调 ========== */
+@media screen and (max-width: 380px) {
+    .logo {
+        height: 60px !important;
+    }
+    .company-name {
+        font-size: 19px !important;
+    }
+    .nav-menu {
+        gap: 4px !important;
+    }
+    .nav-menu li a {
+        font-size: 11px !important;
+    }
+    .hero-text-wrap {
+        top: 36% !important;
+    }
+    .hero-title {
+        font-size: 18px !important;
+    }
+}
