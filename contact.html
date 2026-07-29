@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About KDHI | Belt Conveyor & Conveying System Design, Manufacture, Service</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Font Awesome 在线 CDN，独立加载图标字体样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 外部引入样式 -->
+    <link rel="stylesheet" href="css/style2.css?v=20260727v5">
+
+<style>
+/* ========== About页面专属布局｜左侧图片竖向排列，图片之间拥有行间距 ========== */
+.about-panel-row {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+/* 左侧图片容器：固定宽度，内部图片竖排 */
+.about-panel-img {
+    flex: 0 0 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px; /* 控制多张图片之间的垂直间距，自行调整数值大小 */
+}
+
+.about-panel-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* 右侧文字区域 */
+.about-panel-body {
+    flex: 1;
+}
+
+/* 移动端自动切换上下竖排 */
+@media screen and (max-width: 992px) {
+    .about-panel-row {
+        flex-direction: column;
+    }
+    .about-panel-img {
+        flex: unset;
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header class="header-video-container">
+    <video class="header-video" autoplay loop muted playsinline>
+        <source src="kdhi index.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div class="top-bar">
+<div class="logo-name">
+    <a href="./index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+    <div class="company-name">   </div>
+</div>
+
+        <div class="top-right">
+            <div class="top-contact">
+                <span>Phone: +86 137 0000 9809</span>
+                <span class="contact-separator">|</span>
+                <span>Email: <a href="mailto:contact@kdhi.com.cn">contact@kdhi.com.cn</a></span>
+            </div>
+            <div class="nav-bar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="about - A.html">Services</a>
+                        <ul class="submenu">
+                            <li><a href="about.html">Designing & engineering</a></li>
+                            <li><a href="about.html">supply</a></li>
+                            <li><a href="about.html">Spares</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 标题+副标题统一包裹容器，垂直排布，不会重叠 -->
+    <div class="hero-text-wrap">
+        <h1 class="hero-title">KDHI, Leading Innovation in Belt Conveyors Since 1993</h1>
+        <div class="hero-subtitle">
+            KDHI, Shanghai Keda Heavy Industry Group， delivers Bulk Material Conveying technology solutions, serving mining, ports, metallurgy, chemical, and grain industries, empowering innovation in large-scale conveying and logistics equipment worldwide.
+        </div>
+    </div>
+    <div class="scrolling-text-container">
+        <div class="scrolling-text-wrapper">
+            <div class="scrolling-text-item">China Largest Belt Conveyor Manufacturer</div>
+            <div class="scrolling-text-item">ISO9001 Serie's ISO14001 ISO 45001 Certifications</div>
+            <div class="scrolling-text-item">Global Service</div>
+            <div class="scrolling-text-item">CEMA GB ISO AS DIN JS EC ГОСТ</div>
+            <div class="scrolling-text-item">Belt Conveyor & Conveying System Solution Providers</div>
+
+            <div class="scrolling-text-item">China Largest Belt Conveyor Manufacturer</div>
+            <div class="scrolling-text-item">ISO9001 Serie's ISO14001 ISO 45001 Certifications</div>
+            <div class="scrolling-text-item">Global Service</div>
+            <div class="scrolling-text-item">CEMA GB ISO AS DIN JS EC ГОСТ</div>
+            <div class="scrolling-text-item">Belt Conveyor & Conveying System Solution Provider</div>
+        </div>
+    </div>
+</header>
+
+<div class="profiles-title-wrap">
+    <h2 class="profiles-title"> Contact us</h2>
+</div>
+
+<section class="about-layout">
+    <nav class="about-sidebar">
+        <ul class="about-nav-list">
+            <li><a href="#" class="about-nav-item active about-nav-item-bold" data-target="panel-aboutus">Contact us</a></li>
+            <li><a href="#" class="about-nav-item" data-target="panel-requestquote">Request a Quote</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-content-wrap">
+
+        <!-- Panel 0: Contact us -->
+        <div id="panel-aboutus" class="about-content active">
+            <h2 class="about-content-title">Contact us</h2>
+            <div class="about-panel-row">
+                <div class="about-panel-img"> <img src="img/contact.webp" alt="KDHI contact">
+                </div>
+                
+                <div class="about-panel-body">
+                    <p style="margin-top:1.5rem;">We welcome all enquiries and potential cooperation.<br>
+                        If you require project consultation, quotation requests, RFI, technical consultation, 
+                        or submission of project RFP/RFQ documents, please connect with us via the contact details below.<br>
+                    <strong>Telephone: +86 137 0000 9809</strong><br>
+                    <strong>Email Correspondence Guidelines: </strong>                    
+                    </p>
+
+                    <ul class="about-bullet-list">
+                       <li><strong><a href="mailto:info@kdhi.com.cn" style="color:inherit !important;text-decoration:none !important;">info@kdhi.com.cn</a></strong> General & preliminary inquiries, agency cooperation</li>
+                       <li><strong><a href="mailto:contact@kdhi.com.cn" style="color:inherit !important;text-decoration:none !important;">contact@kdhi.com.cn</a></strong> Quotation, order, contract & commercial affairs</li>
+                       <li><strong><a href="mailto:tech@kdhi.com.cn" style="color:inherit !important;text-decoration:none !important;">tech@kdhi.com.cn</a></strong> Engineering and technical support</li>
+                       <li><strong><a href="mailto:sam@kdhi.com.cn" style="color:inherit !important;text-decoration:none !important;">sam@kdhi.com.cn</a></strong> Direct communication with Sales Manager Mr. Sam</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+<!-- Panel 1: Request a Quote -->
+<div id="panel-requestquote" class="about-content">
+    <h2 class="about-content-title">Request a Quote</h2>
+    <div class="about-panel-row">
+        <div class="about-panel-body">
+            <p>Request A Quote for Belt Conveyor Systems<br>
+            Fill in the form below with your project requirements and technical parameters.
+            Our engineering sales team will prepare a tailored quotation for you promptly.</p>
+
+            <!-- 表单容器：跟随文字下方靠左排版 -->
+            <div style="max-width:760px;margin-top:24px;">
+                <form action="https://formsubmit.co/info@kdhi.com.cn" method="POST" style="text-align:left;">
+                    <!-- ==========【邮件配置区域 开始】========== -->
+                    <input type="hidden" name="_redirect" value="https://www.kdhi.com.cn/thank-you">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- 自定义邮箱标题 -->
+                    <input type="hidden" name="_subject" value="New RFQ Inquiry from KDHI Website">
+                    <!-- 开启表格样式邮件，排版整齐 -->
+                    <input type="hidden" name="_template" value="table">
+                    <!-- ==========【邮件配置区域 结束】========== -->
+
+                    <div style="margin-bottom:20px;">
+                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Full Name / Company Name</label>
+                        <input type="text" name="Name" required style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+                    </div>
+
+                    <div style="margin-bottom:20px;">
+                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Email Address</label>
+                        <input type="email" name="Email" required style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+                    </div>
+
+                    <div style="margin-bottom:20px;">
+                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Phone / WhatsApp</label>
+                        <input type="text" name="Phone" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+                    </div>
+
+                    <div style="margin-bottom:20px;">
+                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Country</label>
+                        <input type="text" name="Country" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+                    </div>
+
+                    <div style="margin-bottom:20px;">
+                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Equipment Type</label>
+                        <select name="Equipment" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+                            <option value="">-- Select equipment --</option>
+                            <option value="Belt Conveyor">Belt Conveyor</option>
+                            <option value="Tubular Belt Conveyor">Tubular Belt Conveyor</option>
+                            <option value="Other Conveying Equipment">Other Conveying Equipment</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom:24px;">
+                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Project & Technical Requirements</label>
+                        <textarea name="Message" rows="5" required placeholder="Conveying length, capacity, raw material, inclination angle, working environment..." style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
+                    </div>
+
+                    <button type="submit" style="background:#0052cc;color:#ffffff;border:none;padding:13px 36px;border-radius:4px;font-size:16px;cursor:pointer;">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" name="_subject" value="New RFQ Inquiry from KDHI Website">
+    </section>
+
+<div class="footer-container">
+    <div class="footer-columns">
+        <div class="footer-column">
+            <h3>Quick Menu</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">Services</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>KDHI Group</h3>
+            <div class="contact-info">
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-building"></i></span><strong>Shanghai Keda Heavy Industry Group Co., Ltd.</strong></p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>No.815, Huaqing Road, Qingpu Industrial Zone, Shanghai, China</p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-building"></i></span><strong>Manufacturing Base:Keda Heavy Industry Group (Langxi) Co., Ltd.</strong></p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>No.29 Jinniu Middle Road, Langxi Economic Development
+                    Zone,Langxi County,Xuancheng, Anhui Province, China.</p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-link"></i></span>www.kdhi.com.cn</p>
+                <p><a href="https://www.linkedin.com/company/kdhi" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit KDHI LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></p>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>Hours: Mon-Fri 9:00-17:00 (GMT+8)</p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>Phone: +86 137 0000 9809</p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>Email: <a href="mailto:contact@kdhi.com.cn">contact@kdhi.com.cn</a> <STRONG>Business</STRONG></p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-fax"></i></span>Fax: +86 21 6921 1558</p>
+                <p><span class="contact-icon" aria-hidden="true"><i class="fa-brands fa-weixin"></i></span>Wechat: KDHI OFFICIAL</p>
+                <p><a href="https://www.linkedin.com/in/aimin-sun-2a32633a/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit personal LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="company-info">
+    <p class="highlight">KDHI | Belt Conveyor & Conveying System Design, Manufacture, Service</p>
+    <p>ISO 9001:2015 Certified | CE Approved | ГОСТ Certified</p>
+    <p>Our mission: To provide reliable and efficient belt conveyor solutions for global customers</p>
+</div>
+
+<div class="copyright">
+    © 2026 KDHI Group. All Rights Reserved. | Updated: March 2026 | Privacy Policy | Terms of Service
+</div>
+
+<script>
+(function() {
+    var navItems = document.querySelectorAll('.about-nav-item');
+    var contentPanels = document.querySelectorAll('.about-content');
+
+    navItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = this.getAttribute('data-target');
+
+            navItems.forEach(function(n) { n.classList.remove('active'); });
+            this.classList.add('active');
+
+            contentPanels.forEach(function(p) { p.classList.remove('active'); });
+            var targetPanel = document.getElementById(target);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+                targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
