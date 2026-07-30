@@ -165,56 +165,70 @@
             Fill in the form below with your project requirements and technical parameters.
             Our engineering sales team will prepare a tailored quotation for you promptly.</p>
 
-            <!-- 表单容器：跟随文字下方靠左排版 -->
-            <div style="max-width:760px;margin-top:24px;">
-                <form action="https://formsubmit.co/info@kdhi.com.cn" method="POST" style="text-align:left;">
-                    <!-- ==========【邮件配置区域 开始】========== -->
-                    <input type="hidden" name="_redirect" value="https://www.kdhi.com.cn/thank-you">
-                    <input type="hidden" name="_captcha" value="false">
-                    <!-- 自定义邮箱标题 -->
-                    <input type="hidden" name="_subject" value="New RFQ Inquiry from KDHI Website">
-                    <!-- 开启表格样式邮件，排版整齐 -->
-                    <input type="hidden" name="_template" value="table">
-                    <!-- ==========【邮件配置区域 结束】========== -->
 
-                    <div style="margin-bottom:20px;">
-                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Full Name / Company Name</label>
-                        <input type="text" name="Name" required style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
-                    </div>
 
-                    <div style="margin-bottom:20px;">
-                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Email Address</label>
-                        <input type="email" name="Email" required style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
-                    </div>
+<!-- 表单容器：跟随文字下方靠左排版 -->
+<div style="max-width:760px;margin-top:24px;">
+    <form action="https://formsubmit.co/info@kdhi.com.cn" method="POST" style="text-align:left;">
+        <!-- ==========【邮件配置区域 开始】========== -->
+        <input type="hidden" name="_redirect" value="https://www.kdhi.com.cn/thank-you">
+        <input type="hidden" name="_captcha" value="false">
+        <!-- 自定义邮箱标题 -->
+        <input type="hidden" name="_subject" value="New RFQ Inquiry from KDHI Website">
+        <!-- 开启表格样式邮件，排版整齐 -->
+        <input type="hidden" name="_template" value="table">
+        <!-- ==========【邮件配置区域 结束】========== -->
 
-                    <div style="margin-bottom:20px;">
-                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Phone / WhatsApp</label>
-                        <input type="text" name="Phone" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
-                    </div>
-
-                    <div style="margin-bottom:20px;">
-                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Country</label>
-                        <input type="text" name="Country" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
-                    </div>
-
-                    <div style="margin-bottom:20px;">
-                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Equipment Type</label>
-                        <select name="Equipment" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
-                            <option value="">-- Select equipment --</option>
-                            <option value="Belt Conveyor">Belt Conveyor</option>
-                            <option value="Tubular Belt Conveyor">Tubular Belt Conveyor</option>
-                            <option value="Other Conveying Equipment">Other Conveying Equipment</option>
-                        </select>
-                    </div>
-
-                    <div style="margin-bottom:24px;">
-                        <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Project & Technical Requirements</label>
-                        <textarea name="Message" rows="5" required placeholder="Conveying length, capacity, raw material, inclination angle, working environment..." style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
-                    </div>
-
-                    <button type="submit" style="background:#0052cc;color:#ffffff;border:none;padding:13px 36px;border-radius:4px;font-size:16px;cursor:pointer;">Submit Inquiry</button>
-                </form>
+        <!-- 第一组：Name + Email 并排 -->
+        <div style="display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:260px;">
+                <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Full Name / Company Name</label>
+                <input type="text" name="Name" required style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
             </div>
+            <div style="flex:1;min-width:260px;">
+                <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Email Address</label>
+                <input type="email" name="Email" required style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+            </div>
+        </div>
+
+        <!-- 第二组：Phone + Country 并排 -->
+        <div style="display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:260px;">
+                <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Phone / WhatsApp</label>
+                <input type="text" name="Phone" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+            </div>
+            <div style="flex:1;min-width:260px;">
+                <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Country</label>
+                <input type="text" name="Country" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+            </div>
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;">Requirement Type</label>
+            <select name="Equipment" style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;">
+                <option value="">-- Select requirement type --</option>
+                <option value="Belt Conveyor">Belt Conveyor</option>
+                <option value="Tubular Belt Conveyor">Tubular Belt Conveyor</option>
+                <option value="Other Conveying Equipment">Pulleys</option>
+                <option value="Other Conveying Equipment">Idlers/rollers</option>
+                <option value="Other Conveying Equipment">Steelwork/truss/gallery/transfer tower</option>
+                <option value="Other Conveying Equipment">Technical Support Required</option>
+                <option value="Other Conveying Equipment">Other Conveying Equipment</option>
+
+            </select>
+        </div>
+
+        <div style="margin-bottom:24px;">
+            <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;"> Requirement in Detail</label>
+            <textarea name="Message" rows="5" required placeholder="Conveying length, capacity, raw material, inclination angle, working environment..." style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
+        </div>
+
+        <button type="submit" style="background:#0052cc;color:#ffffff;border:none;padding:13px 36px;border-radius:4px;font-size:16px;cursor:pointer;">Submit Inquiry</button>
+    </form>
+</div>
+
+
+
         </div>
     </div>
 </div>
