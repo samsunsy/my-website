@@ -176,7 +176,6 @@
         <!-- 自定义邮箱标题 -->
         <input type="hidden" name="_subject" value="New RFQ Inquiry from KDHI Website">
         <!-- 开启表格样式邮件，排版整齐 -->
-        <input type="hidden" name="_template" value="table">
         <!-- ==========【邮件配置区域 结束】========== -->
 
         <!-- 第一组：Name + Email 并排 -->
@@ -220,7 +219,7 @@
 
         <div style="margin-bottom:24px;">
             <label style="display:block;margin-bottom:6px;font-weight:500;font-size:16px;"> Requirement in Detail</label>
-            <textarea name="Message" rows="5" required placeholder="Conveying length, capacity, raw material, inclination angle, working environment..." style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
+            <textarea name="Message" rows="5" required maxlength="3600" placeholder="Conveying length, capacity, raw material, inclination angle, working environment..." style="width:100%;padding:11px 14px;border:1px solid #cccccc;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
         </div>
 
         <button type="submit" style="background:#0052cc;color:#ffffff;border:none;padding:13px 36px;border-radius:4px;font-size:16px;cursor:pointer;">Submit Inquiry</button>
